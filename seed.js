@@ -1,5 +1,10 @@
 const db = require('./models');
 
+// const carrot1 = db.Vegetable.create( {
+//   name: 'carrot',
+//   color: 'orange'
+// })
+
 db.sync({force: true})
 .then(() => {
   console.log('db synced');
@@ -10,3 +15,4 @@ db.sync({force: true})
 .finally(() => {
   db.close();
 })
+
